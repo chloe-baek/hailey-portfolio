@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #f7f3f0;
+  margin: 0 auto;
+  max-width: 80vw;
+  padding: 2rem; }
+
+@keyframes rotateWords {
+  0% {
+    transform: translateY(70%); }
+  10% {
+    transform: translateY(5%); }
+  20% {
+    transform: translateY(0%); }
+  30% {
+    transform: translateY(-107%); }
+  40% {
+    transform: translateY(-100%); }
+  50% {
+    transform: translateY(-207%); }
+  60% {
+    transform: translateY(-200%); }
+  70% {
+    transform: translateY(-307%); }
+  80% {
+    transform: translateY(-300%); }
+  90% {
+    transform: translateY(-407%); }
+  100% {
+    transform: translateY(-400%); } }
+
+/*Font
+font-family: basic-sans, sans-serif;
+font-weight: 400; // 300
+font-style: normal;
+
+font-family: calluna, serif;
+font-weight: 600; //400
+font-style: normal;
+
+*/
+.header__title {
+  font-family: calluna, serif;
+  font-weight: 400;
+  font-size: 3rem; }
+
+.nav__link {
+  font-family: basic-sans, sans-serif;
+  font-weight: 400; }
+
+main {
+  font-family: basic-sans, sans-serif;
+  font-weight: 400; }
+
+.header {
+  height: 100vh;
+  width: 65vw;
+  margin: 0 auto; }
+  .header__title {
+    position: relative;
+    top: 10%; }
+  .header__image {
+    border-radius: 73% 27% 77% 23% / 44% 55% 45% 56%;
+    width: 60%;
+    height: auto;
+    max-width: 650px;
+    position: absolute;
+    right: 0;
+    z-index: -1; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 1; }
+  .nav__logo {
+    width: auto;
+    height: 3rem; }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none; }
+  .nav__item {
+    margin-left: 4rem; }
+  .nav__link {
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #1f1f1f;
+    display: block;
+    transition: all 0.3s; }
+
+.rotate {
+  position: absolute;
+  display: flex;
+  padding-left: 3rem;
+  height: 70px;
+  justify-content: center; }
+  .rotate__p {
+    margin-top: 0; }
+  .rotate__words {
+    overflow: hidden; }
+  .rotate__word {
+    display: block;
+    height: 100%;
+    padding-left: 1rem;
+    animation: rotateWords 8s infinite; }

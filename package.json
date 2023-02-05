@@ -1,0 +1,14 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "the portfolio of Hailey",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "author": "Chloe",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
