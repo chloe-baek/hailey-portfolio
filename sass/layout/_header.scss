@@ -15,9 +15,9 @@
     border-radius: 73% 27% 77% 23% / 44% 55% 45% 56%;
     width: 60%;
     height: auto;
-    max-width: 650px;
-    // min-height: 100vh;
+    max-width: 600px;
     position: absolute;
+    // top: 10vh;
     right: 0;
     z-index: -1;
   }
@@ -60,9 +60,11 @@
   padding-left: 3rem;
   height: 70px;
   justify-content: center;
+  transform: translate(10px, 65px);
 
   &__p {
     margin-top: 0;
+    font-size: 5rem;
   }
   &__words {
     overflow: hidden;
@@ -72,6 +74,7 @@
     display: block;
     height: 100%;
     padding-left: 1rem;
+    font-size: 5rem;
     animation: rotateWords 8s infinite;
   }
 }
