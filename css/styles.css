@@ -190,3 +190,51 @@ main {
   .projects__item-4 {
     grid-column: 2 /4;
     grid-row: 2/3; }
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; }
+
+.loading__text {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: #f7f3f0; }
+  .loading__text--wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1f1f1f; }
+
+.loading__reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ebe2d5; }
+
+.loading__pre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f7f3f0; }
+
+.loading__page {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(10deg, #1f1f1f 0%, rgba(31, 31, 31, 0.5) 100%); }
+  .loading__page--wrapper {
+    position: relative;
+    width: 10px;
+    height: 140px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: rotate(90deg); }

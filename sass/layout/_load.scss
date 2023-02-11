@@ -1,0 +1,61 @@
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.loading {
+  &__text {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: $color-bg;
+
+    &--wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-primary;
+    }
+  }
+
+  &__reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $color-bg-secondary;
+  }
+
+  &__pre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-bg;
+  }
+  &__page {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgb(251, 0, 255);
+    background: linear-gradient(
+      10deg,
+      rgba($color-primary, 1) 0%,
+      rgba($color-primary, 0.5) 100%
+    );
+
+    &--wrapper {
+      position: relative;
+      width: 10px;
+      height: 140px;
+      background: rgb(240, 240, 240);
+      border-radius: 4px;
+      overflow: hidden;
+      transform: rotate(90deg);
+    }
+  }
+}

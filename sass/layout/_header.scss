@@ -4,13 +4,20 @@
   margin: 0 auto;
 
   &__title {
-    // display: flex;
+    // display: grid;
     // justify-content: space-between;
     position: relative;
     // left: 50%;
     top: 10%;
     // transform: translate(-50%, -60%);
   }
+
+  // &__right {
+  //   position: relative;
+  //   display: flex;
+  //   justify-self: center;
+  //   align-items: flex-start;
+  // }
   &__image {
     border-radius: 73% 27% 77% 23% / 44% 55% 45% 56%;
     width: 60%;
