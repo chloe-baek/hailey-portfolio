@@ -1,0 +1,9 @@
+.contact {
+  display: flex;
+  &__content {
+    flex-basis: 50%;
+  }
+  &__form {
+    flex-basis: 50%;
+  }
+}

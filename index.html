@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/dga8djl.css">
+    <script src="https://kit.fontawesome.com/03376f39f2.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <title>Hailey's Design</title>
@@ -17,8 +18,9 @@
     <header class="header">
         <div class="header__nav">
             <nav class="nav">
-                <img src="./img/logo.png" alt="Hailey's Design Logo" class="nav__logo" id="logo" width="483" height="85"
-                    designer="Chloe" />
+                <a href="#">
+                    <img src="./img/logo.png" alt="Hailey's Design Logo" class="nav__logo" id="logo" width="483"
+                        height="85" designer="Chloe" /></a>
                 <ul class="nav__links">
                     <li class="nav__item">
                         <a class="nav__link" href="#section--1">Project</a>
@@ -34,7 +36,7 @@
             </nav>
         </div>
         <div class="header__title">
-
+            <!-- 
             <div class="header__left">
                 <div class="rotate">
                     <p class="rotate__p">Designing space that are</p>
@@ -45,6 +47,16 @@
                         <span class="rotate__word">harmonious</span>
                         <span class="rotate__word">balanced</span>
                     </div>
+                </div>
+            </div> -->
+            <div class="header__left stagger">
+                <div class="stagger__wrapper">
+                    <h2>
+                        <div class="stagger__item">Designing spaces</div>
+                        <div class="stagger__item">with creativity, passion</div>
+                        <div class="stagger__item">and an unwavering commitment </div>
+                        <div class="stagger__item">to excellence.</div>
+                    </h2>
                 </div>
             </div>
 
@@ -58,26 +70,26 @@
     <main>
         <section class="section" id="section--1">
             <div class="section__title margin-medium">
-                <h2 class="section__header">
+                <h3 class="section__header">
                     Project
-                </h2>
+                </h3>
             </div>
 
             <div class="projects">
                 <article class="projects__item projects__item-1">
-                    <a href="#">
+                    <a href="#modal1" class="btn--show-modal">
 
                         <img src="./img/art deco/art1_large.jpg" alt="project 1" width="1200" height="675"
                             class="projects__image">
                         <div class="projects__item--hover">
-                            <h3 class="projects__header"> Art Deco
-                            </h3>
+                            <h4 class="projects__header"> Art Deco
+                            </h4>
                         </div>
 
                     </a>
                 </article>
                 <article class="projects__item projects__item-2">
-                    <a href="#">
+                    <a href="#modal2" class="btn--show-modal">
 
                         <img src="./img/mid centry/mid1_large.jpg" alt="project 2" width="675" height="675"
                             class="projects__image">
@@ -88,7 +100,7 @@
                     </a>
                 </article>
                 <article class="projects__item projects__item-3">
-                    <a href="#">
+                    <a href="#modal3" class="btn--show-modal">
 
                         <img src="./img/scandinavian/scan1_thumb.jpg" alt="project 2" width="675" height="675"
                             class="projects__image">
@@ -99,7 +111,7 @@
                     </a>
                 </article>
                 <article class="projects__item projects__item-4">
-                    <a href="#">
+                    <a href="#modal4" class="btn--show-modal">
 
                         <img src="./img/plants/plant1_large.jpg" alt="project 1" width="1200" height="675"
                             class="projects__image">
@@ -123,11 +135,17 @@
                     <img src="./img/profile.jpg" alt="" width="800" height="1200" class="about__image">
                 </div>
                 <div class="about__content">
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nihil at placeat id quasi, ex
-                        vero repellat facere aliquam ad delectus accusamus. Quae blanditiis totam quisquam minus
-                        tempore dignissimos rem!</p>
-
+                    <p>I am a talented and experienced interior designer with a passion for creating beautiful and
+                        functional spaces. With over 5 years of experience in the industry, I have a keen eye for detail
+                        and a deep understanding of space planning, color theory, and material selection. I hold a
+                        degree in Interior Design from a top university and have worked on a wide range of projects,
+                        from small residential renovations to large commercial spaces.
+                        In my free time, I enjoy staying up to date with the latest design trends and exploring new
+                        materials and techniques. Also, an active member of the Interior Designers Association of
+                        Canada, where I participate in events and workshops to expand my knowledge and network with
+                        fellow designers.
+                        If you're looking for a talented and dedicated interior designer who will bring your vision to
+                        life, look no further than Hailey's Design.</p>
                 </div>
             </div>
         </section>
@@ -138,9 +156,24 @@
                 </h2>
             </div>
             <div class="contact">
-                <div class="contact__content"></div>
+                <div class="contact__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste a consectetur ea commodi facilis
+                        tempore rem fugiat! Quaerat cupiditate numquam aspernatur esse perferendis cumque nesciunt, sint
+                        dignissimos vitae nisi fuga.</p>
+                </div>
                 <div class="contact__form">
-                    <form action=""></form>
+                    <form action="" method="post">
+                        <fieldset>
+                            <div class="contact__form">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"
+                                    required></textarea>
+                                <input type="submit" value="Send Email">
+                            </div>
+
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </section>
@@ -148,6 +181,8 @@
     </main>
 
     <footer></footer>
+
+    <!-- loading page -->
     <div class="loading">
         <div class="loading__text--wrapper block">
             <h1 class="loading__text">Hailey's Design</h1>
@@ -159,7 +194,15 @@
             </div>
         </div>
     </div>
-    <!-- <div class="modal" id="modal1">
+
+    <!-- to top -->
+    <a href="#" class="top">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
+
+    <!-- modals -->
+    <div class="modal hidden" id="modal1">
+        <button class="btn--close-modal">&times;</button>
         <div class="modal__content">
             <div class="modal__top">
                 <img src="./img/project1.jpg" alt="project1" class="modal__img">
@@ -170,8 +213,12 @@
                     laborum neque laboriosam reiciendis. Quas!</p>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="overlay hidden"></div>
+
 </body>
 <script src="./js/loading.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/modal.js"></script>
 
 </html>

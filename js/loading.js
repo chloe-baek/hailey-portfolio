@@ -57,16 +57,16 @@ gsap.to('.loading__text--wrapper', 0.2, {
 });
 
 gsap.to('.header__image', 1, {
-  right: '50%',
+  right: '45%',
   ease: 'power3.inOut',
-  delay: 4.5,
+  delay: 4.3,
 });
-// gsap.to('.col-left .copy > div', 1.5, {
-//   x: -40,
-//   opacity: 0,
-//   ease: 'power3.inOut',
-//   delay: 5,
-//   stagger: {
-//     amount: 0.3,
-//   },
-// });
+gsap.to('.stagger__wrapper', 1.5, {
+  x: 40,
+  opacity: 1,
+  ease: 'power3.inOut',
+  delay: 5,
+  stagger: {
+    amount: 0.5,
+  },
+});
