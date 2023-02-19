@@ -1,4 +1,4 @@
-let textWrapper = document.querySelector('.loading__text');
+const textWrapper = document.querySelector('.loading__text');
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
@@ -56,17 +56,33 @@ gsap.to('.loading__text--wrapper', 0.2, {
   delay: 4,
 });
 
-gsap.to('.header__image', 1, {
-  right: '45%',
+gsap.from('.header__image', 1, {
+  right: '20%',
+  opacity: 0,
   ease: 'power3.inOut',
-  delay: 4.3,
+  delay: 5,
 });
-gsap.to('.stagger__wrapper', 1.5, {
-  x: 40,
+gsap.to('.header__image', 1, {
+  right: '50%',
   opacity: 1,
   ease: 'power3.inOut',
   delay: 5,
+});
+gsap.to('.stagger__wrapper', 1.5, {
+  x: 50,
+  opacity: 1,
+  ease: 'power3.inOut',
+  delay: 6,
   stagger: {
     amount: 0.5,
   },
 });
+
+function loadingPage() {
+  document.querySelector('body').style.overflow = 'hidden';
+  setTimeout(() => {
+    document.querySelector('body').style.overflow = 'scroll';
+  }, 6000);
+}
+
+loadingPage();

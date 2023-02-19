@@ -1,6 +1,6 @@
 /*Font
 font-family: basic-sans, sans-serif;
-font-weight: 400; // 300
+font-weight: 400; // 300 // 600 //700
 font-style: normal;
 
 font-family: calluna, serif;
@@ -19,10 +19,31 @@ font-style: normal;
   &__link {
     font-family: basic-sans, sans-serif;
     font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
   }
 }
 
 main {
   font-family: basic-sans, sans-serif;
   font-weight: 400;
+}
+.projects {
+  &__header {
+    font-size: 2rem;
+  }
+}
+.modal {
+  &__btm {
+    font-family: basic-sans, sans-serif;
+    font-weight: 400;
+
+    &-h5 {
+      font-size: 2.3rem;
+    }
+
+    &-para {
+      font-size: 1.4rem;
+    }
+  }
 }

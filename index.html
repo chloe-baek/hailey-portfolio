@@ -68,14 +68,9 @@
     </header>
 
     <main>
-        <section class="section" id="section--1">
-            <div class="section__title margin-medium">
-                <h3 class="section__header">
-                    Project
-                </h3>
-            </div>
+        <section class="section margin-medium" id="section--1">
 
-            <div class="projects">
+            <div class="projects margin-medium">
                 <article class="projects__item projects__item-1">
                     <a href="#modal1" class="btn--show-modal">
 
@@ -124,13 +119,8 @@
             </div>
         </section>
         <section class="section" id="section--2">
-            <div class="section__title margin-medium">
-                <h2 class="section__header">
-                    About
-                </h2>
-            </div>
 
-            <div class="about">
+            <div class="about margin-medium">
                 <div class="about__portrait">
                     <img src="./img/profile.jpg" alt="" width="800" height="1200" class="about__image">
                 </div>
@@ -150,12 +140,8 @@
             </div>
         </section>
         <section class="section" id="section--3">
-            <div class="section__title margin-medium">
-                <h2 class="section__header">
-                    Let's talk
-                </h2>
-            </div>
-            <div class="contact">
+
+            <div class="contact margin-medium">
                 <div class="contact__content">
                     <p>Let's talk about how I can help you bring your design ideas to life. Please feel free to reach
                         out to me using the contact form or information below.</p>
@@ -204,11 +190,30 @@
         <button class="btn--close-modal">&times;</button>
         <div class="modal__content">
             <div class="modal__top">
-                <img src="./img/project1.jpg" alt="project1" class="modal__img">
+                <!-- <div class="modal__top-top">
+                    <img src="./img/art deco/art1.jpg" alt="project1" class="modal__img">
+                    <img src="./img/art deco/art2.jpg" alt="project1" class="modal__img">
+                </div>
+                <div class="modal__top-btm">
+                    <img src="./img/art deco/art3.jpg" alt="project1" class="modal__img">
+                    <img src="./img/art deco/art4.jpg" alt="project1" class="modal__img">
+                </div> -->
+                <ul class="modal__container">
+                    <li class="modal__list"><img src="./img/art deco/art1.jpg" alt="project1" class="modal__img"></li>
+                    <li class="modal__list"><img src="./img/art deco/art2.jpg" alt="project1" class="modal__img"></li>
+                    <li class="modal__list"><img src="./img/art deco/art3.jpg" alt="project1" class="modal__img"></li>
+                    <li class="modal__list"><img src="./img/art deco/art4.jpg" alt="project1" class="modal__img"></li>
+                </ul>
+
             </div>
-            <div class="modal__down">
-                <h5>Art Deco</h5>
-                <p>Distinguished by its geometric shapes, bold colors, and luxurious materials, Art Deco emerged in the
+            <div class="control">
+                <button class="prev">prev</button>
+                <button class="next">next</button>
+            </div>
+            <div class="modal__btm margin-medium">
+                <h5 class="modal__btm-h5">Art Deco</h5>
+                <p class="modal__btm-para">Distinguished by its geometric shapes, bold colors, and luxurious materials,
+                    Art Deco emerged in the
                     1920s and 1930s. As a style of interior design, Art Deco is known for its emphasis on opulence and
                     glamour, incorporating resources like chrome, glass, and exotic woods, as well as bold geometric
                     patterns.
@@ -222,7 +227,9 @@
 
 </body>
 <script src="./js/loading.js"></script>
-<script src="./js/script.js"></script>
+<script src="./js/scroll.js"></script>
 <script src="./js/modal.js"></script>
+<script src="./js/slide.js"></script>
+<script src="./js/nav.js"></script>
 
 </html>

@@ -28,7 +28,7 @@
   // }
   &__image {
     border-radius: 73% 27% 77% 23% / 44% 55% 45% 56%;
-    width: 60%;
+    width: 80%;
     height: auto;
     max-width: 600px;
     position: absolute;
@@ -61,11 +61,8 @@
     margin-left: 4rem;
   }
   &__link {
-    font-size: 1.9rem;
-    font-weight: 400;
     text-decoration: none;
     color: $color-primary;
-    letter-spacing: 0.05em;
     display: block;
     transition: all 0.3s;
     position: relative;
@@ -76,29 +73,22 @@
       position: absolute;
       height: 3px;
       width: 0%;
-      background-color: blueviolet;
-      transition: all 0.5s;
+      background-color: rgba($color-primary, 0.7);
+      transition: all 0.7s;
     }
 
     &::after {
       left: 0;
-      bottom: -10px;
+      bottom: -5px;
     }
     &::before {
       right: 0;
-      top: -10px;
+      top: -5px;
     }
     &:hover {
-      color: red;
+      // color: $color-bg;
+      transform: translateY(2px);
 
-      &::after,
-      &::before {
-        width: 100%;
-      }
-    }
-
-    &:active,
-    &:focus {
       &::after,
       &::before {
         width: 100%;
@@ -107,7 +97,15 @@
   }
 
   &__active {
-    background-color: yellowgreen;
+    // font-weight: 700;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: rgba($color-primary, 0.7);
+      transition: all 0.7s;
+    }
   }
 }
 .nav.sticky {
