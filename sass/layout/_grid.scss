@@ -6,10 +6,12 @@
   grid-auto-flow: dense;
   max-width: 1100px;
   min-width: 600px;
+
   //   &__figure {
   //     position: relative;
   //     overflow: hidden;
   //   }
+
   &__item {
     position: relative;
     overflow: hidden;
@@ -19,6 +21,8 @@
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both;
+    max-height: 40vh;
+
     &--hover {
       @include absCenter;
       @include transition3s;
@@ -45,10 +49,13 @@
   }
 
   &__header {
-    background-color: $color-bg;
-    color: $color-primary;
+    // background-color: $color-bg;
+    color: $color-bg;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+    border-bottom: 3px solid $color-bg;
   }
   //   &__item--hover {
   //     opacity: 0;
@@ -64,6 +71,7 @@
     min-height: 100%;
     height: auto;
     width: 100%;
+    border-radius: 3px;
   }
   &__item-1 {
     grid-column: 1/3;

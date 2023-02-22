@@ -7,8 +7,9 @@
 }
 .loading {
   &__text {
-    font-size: 30px;
-    font-weight: 400;
+    font-family: calluna, serif;
+    font-size: 3rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     color: $color-bg;

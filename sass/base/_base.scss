@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -14,28 +15,7 @@ body {
   background-color: $color-bg;
   color: $color-primary;
   margin: 0 auto;
+  font-family: basic-sans, sans-serif;
   // max-width: 80vw;
   // padding: 2rem;
-}
-main {
-  margin: 0 auto;
-  width: 65vw;
-}
-.section {
-  // display: flex;
-  // flex-direction: column;
-  min-height: 110vh;
-  width: 65vw;
-  // position: relative;
-  // top: 20vh;
-  // padding-top: 10rem;
-
-  &__title {
-    text-align: right;
-    font-size: 1.5rem;
-  }
-
-  &__header {
-    font-size: 2rem;
-  }
 }

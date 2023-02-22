@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &-prev,
+  &-next {
+    border: none;
+    font-size: 3rem;
+    background-color: $color-bg;
+    cursor: pointer;
+  }
+}
+.control {
+  text-align: center;
+  margin-top: 20px;
+}

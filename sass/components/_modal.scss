@@ -106,7 +106,7 @@
   min-width: 100rem;
   max-width: 150rem;
   background-color: #f3f3f3;
-  padding: 5rem 6rem;
+  padding: 3rem 4rem;
   border-radius: 5px;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -147,6 +147,20 @@
     margin: 0 auto;
     overflow: hidden;
   }
+
+  &__btm {
+    font-weight: 400;
+
+    &-h5 {
+      font-size: 2.5rem;
+    }
+
+    &-para {
+      padding-top: 1rem;
+      font-size: $font-size-default;
+      line-height: 1.7;
+    }
+  }
   &__container {
     position: absolute;
     left: 0;
@@ -158,20 +172,23 @@
     height: 450px;
     background-color: #ccc;
     float: left;
+    list-style: none;
 
     &:not(:last-child) {
       margin-right: 30px;
     }
   }
-}
-.control {
-  text-align: center;
-  margin-top: 50px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .modal__top .animated {
   transition: 0.5s ease-out;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -184,6 +201,7 @@
   z-index: 100;
   transition: all 0.5s;
 }
+
 .btn--close-modal {
   font-family: inherit;
   color: inherit;
@@ -195,6 +213,7 @@
   border: none;
   background: none;
 }
+
 .hidden {
   visibility: hidden;
   opacity: 0;

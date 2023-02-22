@@ -1,9 +1,57 @@
 .contact {
-  display: flex;
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-bg, 0.9) 0%,
+      rgba($color-bg, 0.9) 50%,
+      transparent 50%
+    ),
+    url(./../img/contact.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-primary, 0.2);
+  min-width: 65vw;
+  height: auto;
+
   &__content {
-    flex-basis: 50%;
+    font-size: $font-size-default;
+    line-height: 1.7;
+    padding-bottom: 2rem;
   }
+
   &__form {
-    flex-basis: 50%;
+    width: 50%;
+    margin: 3rem 0;
+
+    &-fieldset {
+      border: none;
+      padding: 3rem;
+    }
+
+    &-group:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      // margin-left: 2rem;
+      // margin-top: 0.7rem;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    &-input {
+      font-size: 1.5rem;
+      font-family: inherit;
+      color: inherit;
+      padding: 1.5rem 2rem;
+      border-radius: 5px;
+      background-color: rgba($color-bg, 0.7);
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+      transition: all 0.3;
+    }
   }
 }

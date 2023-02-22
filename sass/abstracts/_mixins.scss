@@ -6,6 +6,14 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin transition3s {
   transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
