@@ -78,11 +78,11 @@ gsap.to('.stagger__wrapper', 1.5, {
   },
 });
 
-function loadingPage() {
-  document.querySelector('body').style.overflow = 'hidden';
-  setTimeout(() => {
-    document.querySelector('body').style.overflow = 'scroll';
-  }, 6000);
-}
+// function loadingPage() {
+//   document.querySelector('body').style.overflow = 'hidden';
+//   setTimeout(() => {
+//     document.querySelector('body').style.overflow = 'scroll';
+//   }, 6000);
+// }
 
-loadingPage();
+// loadingPage();
