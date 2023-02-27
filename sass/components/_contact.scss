@@ -12,6 +12,15 @@
   min-width: 65vw;
   height: auto;
 
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        rgba($color-bg, 0.4) 0%,
+        rgba($color-bg, 0.9) 100%,
+        transparent 50%
+      ),
+      url(./../img/contact.jpg);
+  }
+
   &__content {
     font-size: $font-size-default;
     line-height: 1.7;
@@ -21,6 +30,9 @@
   &__form {
     width: 50%;
     margin: 3rem 0;
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &-fieldset {
       border: none;
@@ -51,7 +63,13 @@
       border-bottom: 3px solid transparent;
       width: 90%;
       display: block;
-      transition: all 0.3;
+
+      @include respond(tab-port) {
+        margin: 0 auto;
+      }
     }
   }
+}
+input[type='submit'] {
+  cursor: pointer;
 }

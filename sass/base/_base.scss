@@ -16,6 +16,8 @@ body {
   color: $color-primary;
   margin: 0 auto;
   font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
   // max-width: 80vw;
   // padding: 2rem;
 }

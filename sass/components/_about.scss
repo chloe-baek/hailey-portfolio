@@ -1,30 +1,54 @@
 .about {
   display: flex;
+  justify-content: space-evenly;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 10%);
   height: 100%;
 
+  @include respond(tab-port) {
+    display: block;
+  }
+
   &__portrait {
     flex-basis: 50%;
+    text-align: center;
+    @include respond(tab-port) {
+      text-align: left;
+    }
   }
   &__image {
-    width: 80%;
+    width: 100%;
     min-width: 200px;
     max-width: 500px;
     height: auto;
     border-radius: 64% 36% 78% 22% / 22% 81% 19% 78%;
+
+    @include respond(tab-port) {
+      width: 80%;
+      filter: opacity(0.7);
+    }
   }
 
   &__content {
+    text-align: right;
     flex-basis: 50%;
     padding: 3rem;
+    @include respond(tab-port) {
+      position: absolute;
+      width: 40vw;
+      right: 0;
+      top: 10%;
+    }
   }
 
   &__content > p {
-    text-align: center;
     font-size: 1.7rem;
     line-height: 1.7;
+    @include respond(tab-land) {
+      font-size: $font-size-default;
+      line-height: 1.5;
+    }
   }
 }

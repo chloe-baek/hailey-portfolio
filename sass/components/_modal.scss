@@ -1,151 +1,30 @@
-// .modal {
-//   height: 100vh;
-//   width: 100%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   background-color: rgba($color-primary, 0.8);
-//   z-index: 9999;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: all 0.3s;
-//   // -webkit-backdrop-filter: blur(10px);
-//   // backdrop-filter: blur(10px);
-
-//   @supports (-webkit-backdrop-filter: blur(10px)) or
-//     (backdrop-filter: blur(10px)) {
-//     -webkit-backdrop-filter: blur(10px);
-//     backdrop-filter: blur(10px);
-//     background-color: rgba($color-primary, 0.3);
-//   }
-
-//   &__content {
-//     @include absCenter;
-
-//     width: 75%;
-//     // height: 50rem;
-//     background-color: $color-bg;
-//     box-shadow: 0 2rem 4rem rgba($color-primary, 0.2);
-//     border-radius: 3px;
-//     display: table;
-//     overflow: hidden;
-//     opacity: 0;
-//     transform: translate(-50%, -50%) scale(0.25);
-//     transition: all 0.5s 0.2s;
-//     padding: 3rem;
-//   }
-
-//   &__top {
-//     width: 33.33333%;
-//     display: table-row;
-//   }
-//   &__down {
-//     width: 66.666666%;
-//     display: table-row;
-//     vertical-align: middle;
-//     padding: 3rem 5rem;
-//   }
-//   &__img {
-//     display: block;
-//     width: 50%;
-//     // height: auto;
-//   }
-//   &__text {
-//     font-size: 1.4rem;
-//     margin-bottom: 4rem;
-
-//     -moz-column-count: 2;
-//     -moz-column-gap: 4rem; // 1em = 14px
-//     -moz-column-rule: 1px solid $color-primary;
-
-//     column-count: 2;
-//     column-gap: 4rem; // 1em = 14px
-//     column-rule: 1px solid $color-primary;
-
-//     -moz-hyphens: auto;
-//     -ms-hyphens: auto;
-//     -webkit-hyphens: auto;
-//     hyphens: auto;
-//   }
-
-//   &:target {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-//   &:target &__content {
-//     opacity: 1;
-//     transform: translate(-50%, -50%) scale(1);
-//   }
-//   &__close {
-//     &:link,
-//     &:visited {
-//       color: $color-primary;
-//       position: absolute;
-//       top: 2.5rem;
-//       right: 2.5rem;
-//       font-size: 3rem;
-//       text-decoration: none;
-//       display: inline-block;
-//       transition: all 0.2s;
-//       line-height: 1;
-//     }
-
-//     &:hover {
-//       color: $color-bg;
-//     }
-//   }
-// }
-
-//     @include absCenter;
-
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include fixCenter;
   min-width: 100rem;
   max-width: 150rem;
-  background-color: #f3f3f3;
-  padding: 3rem 4rem;
+  background-color: $color-bg-modal;
+  padding: 3rem 4rem 0 4rem;
   border-radius: 5px;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.4s;
 
-  // &:target {
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
-  // &:target &__content {
-  //   opacity: 1;
-  //   transform: translate(-50%, -50%) scale(1);
-  // }
+  @include respond(tab-land) {
+    min-width: 80rem;
+  }
+  @include respond(tab-port) {
+    min-width: 50rem;
+  }
 
-  // &__content {
-  //   display: flex;
-  //   flex-flow: column wrap-reverse;
-  // }
-  // &__top {
-  //   display: flex;
-  //   align-content: space-between;
-  //   gap: 5px;
-  // }
-
-  // &__img {
-  //   width: 100%;
-  //   height: auto;
-  // }
-  // &__btm {
-  //   &-h5 {
-  //     padding-bottom: 2rem;
-  //   }
-  // }
   &__top {
     position: relative;
     width: 800px;
     height: 450px;
     margin: 0 auto;
     overflow: hidden;
+    @include respond(tab-port) {
+      width: 400px;
+    }
   }
 
   &__btm {
@@ -165,18 +44,19 @@
     position: absolute;
     left: 0;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-flow: row wrap;
+    @include respond(tab-port) {
+      display: inline-block;
+    }
   }
 
   &__list {
-    width: 800px;
-    height: 450px;
-    background-color: #ccc;
-    float: left;
+    padding: 3px;
+    flex-basis: 50%;
     list-style: none;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
   }
 
   &__img {
@@ -202,7 +82,8 @@
   transition: all 0.5s;
 }
 
-.btn--close-modal {
+.btn--close-modal,
+.btn--close-popup {
   font-family: inherit;
   color: inherit;
   position: absolute;
@@ -217,4 +98,22 @@
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.popup {
+  @include fixCenter;
+  background-color: $color-bg-modal;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.4s;
+  width: 30vw;
+  height: 200px;
+
+  & > p {
+    font-size: $font-size-default;
+    width: 80%;
+    @include absCenter;
+  }
 }

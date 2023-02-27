@@ -1,7 +1,9 @@
 .margin-medium {
   margin-bottom: 5rem !important;
   margin-top: 5rem !important;
-}
-.margin-top {
-  margin-top: 30rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
+  }
 }

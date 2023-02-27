@@ -1,4 +1,4 @@
-const slides = document.querySelector('.modal__container'),
+const slides = document.querySelectorAll('.modal__container'),
   slide = document.querySelectorAll('.modal__list'),
   slideCount = slide.length,
   slideWidth = 800,
@@ -39,6 +39,7 @@ function updateWidth() {
     (slideWidth + slideMargin) * newSlideCount - slideMargin + 'px';
   slides.style.width = newWidth;
 }
+
 function setInitPos() {
   const initialTranslateValue = -(slideWidth + slideMargin) * slideCount;
   slides.style.transform = `translateX(${initialTranslateValue}px)`;

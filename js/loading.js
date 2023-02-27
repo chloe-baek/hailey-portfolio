@@ -3,6 +3,7 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
+let media = gsap.matchMedia();
 
 anime.timeline().add({
   targets: '.loading__text .letter',
@@ -62,27 +63,40 @@ gsap.from('.header__image', 1, {
   ease: 'power3.inOut',
   delay: 5,
 });
+
 gsap.to('.header__image', 1, {
-  right: '50%',
+  right: '55%',
   opacity: 1,
   ease: 'power3.inOut',
   delay: 5,
 });
+
 gsap.to('.stagger__wrapper', 1.5, {
-  x: 50,
+  x: 40,
   opacity: 1,
-  ease: 'power3.inOut',
+  ease: 'power4.inOut',
   delay: 6,
   stagger: {
-    amount: 0.5,
+    amount: 0.1,
   },
 });
 
-// function loadingPage() {
-//   document.querySelector('body').style.overflow = 'hidden';
-//   setTimeout(() => {
-//     document.querySelector('body').style.overflow = 'scroll';
-//   }, 6000);
-// }
+media.add('(max-width:750px)', () => {
+  gsap.from('.header__image', 1, {
+    right: '-20%',
+    opacity: 0,
+    ease: 'power3.inOut',
+    delay: 0,
+  });
 
-// loadingPage();
+  gsap.to('.header__image', 1, {
+    right: '0%',
+    opacity: 0.6,
+    ease: 'power3.inOut',
+    delay: 0,
+  });
+
+  gsap.to('.stagger__wrapper', 1.5, {
+    x: -50,
+  });
+});
