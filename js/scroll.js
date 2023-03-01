@@ -9,7 +9,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth',
-      animation: 'fadeIn 0.5s ease-out',
+      animation: 'fadeIn 0.5s ease-in-out',
     });
   }
 });
@@ -23,14 +23,3 @@ window.addEventListener('scroll', () => {
     toTop.classList.remove('active');
   }
 });
-
-// Animations
-// const projectPage = document.querySelector('.projects');
-// window.addEventListener('scroll', function () {
-//   let value = window.scrollY;
-//   console.log(value);
-
-//   if (value > 300) {
-//     projectPage.style.animation = 'fadeIn 2s ease-out';
-//   }
-// });

@@ -1,17 +1,6 @@
-@keyframes showText {
-  from {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   from {
-    transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 15px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -19,30 +8,9 @@
 }
 @-webkit-keyframes fadeIn {
   from {
-    transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 15px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    left: -100px;
-    opacity: 0;
-  }
-  to {
-    left: 100px;
-    opacity: 1;
-  }
-}
-@keyframes slideOut {
-  from {
-    left: 100px;
-    opacity: 1;
-  }
-  to {
-    left: -100px;
-    opacity: 0;
   }
 }

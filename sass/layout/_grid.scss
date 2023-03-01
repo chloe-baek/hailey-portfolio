@@ -28,10 +28,6 @@
       @include absCenter;
       @include transition3s;
       opacity: 0;
-
-      // &:hover {
-      //   opacity: 1;
-      // }
     }
 
     &:hover .projects__image {

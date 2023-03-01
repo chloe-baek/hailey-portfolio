@@ -3,22 +3,13 @@ main {
   width: 65vw;
   font-weight: 400;
   height: 100%;
-  // position: relative;
 }
 
 .section {
   display: inline-block;
-  // flex-direction: column;
-
   min-height: 100vh;
   width: 100%;
-  // position: abs;
-  // top: 50%;
-  // transform: translateY(-50%);
-  // -webkit-transform: translateY(-50%);
   padding-top: 6rem;
-  // max-height: 60vh;
-  // height: auto;
 
   @include respond(desktop) {
     padding-top: 10rem;
@@ -30,13 +21,6 @@ main {
   &:last-child {
     min-height: 80vh;
   }
-
-  // &:last-child {
-  //   position: relative;
-  //   top: 50%;
-  //   transform: translateY(-10%);
-  //   @include clearfix;
-  // }
 
   &__title {
     text-align: right;
